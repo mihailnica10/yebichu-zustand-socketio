@@ -1,8 +1,9 @@
 {
-  "name": "@yebichu/zustand-socketio",
+  "name": "@mihail_nica/zustand-socketio",
   "version": "0.1.0",
   "description": "Zero-provider, batteries-included Socket.IO integration for Zustand",
   "author": "yebichu",
+  "repository": "github:mihailnica10/yebichu-zustand-socketio",
   "license": "MIT",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

@@ -1,8 +1,8 @@
-# @yebichu/zustand-socketio
+# @mihail_nica/zustand-socketio
 
 > Zero-provider, batteries-included Socket.IO integration for Zustand
 
-`@yebichu/zustand-socketio` bridges Zustand state management with Socket.IO for seamless real-time applications. No providers, no context — just stores that are also socket connections. Works in React, React Native, Svelte, Vue, and vanilla JS.
+`@mihail_nica/zustand-socketio` bridges Zustand state management with Socket.IO for seamless real-time applications. No providers, no context — just stores that are also socket connections. Works in React, React Native, Svelte, Vue, and vanilla JS.
 
 ## Features
 
@@ -22,7 +22,7 @@
 ## Install
 
 ```bash
-npm install @yebichu/zustand-socketio
+npm install @mihail_nica/zustand-socketio
 ```
 
 **Peer dependencies:** `zustand@>=4` and `socket.io-client@>=4`
@@ -30,7 +30,7 @@ npm install @yebichu/zustand-socketio
 ## Quick Start
 
 ```typescript
-import { createSocketStore } from "@yebichu/zustand-socketio";
+import { createSocketStore } from "@mihail_nica/zustand-socketio";
 
 const useChatStore = createSocketStore({
   url: "http://localhost:3000",
@@ -133,7 +133,7 @@ Adds socket capabilities to any existing Zustand store as a middleware. Useful w
 ```typescript
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import { socketio } from "@yebichu/zustand-socketio/middleware";
+import { socketio } from "@mihail_nica/zustand-socketio/middleware";
 
 const useStore = create(
   devtools(
@@ -380,7 +380,7 @@ For Server Components and RSC, use `createServerSocketStore` which:
 ```typescript
 // app/actions.ts — Server Action
 "use server";
-import { createServerSocketStore } from "@yebichu/zustand-socketio";
+import { createServerSocketStore } from "@mihail_nica/zustand-socketio";
 
 const useServerStore = createServerSocketStore({
   url: process.env.SOCKET_URL!,
@@ -398,7 +398,7 @@ async function broadcastUpdate(data: unknown) {
 ```typescript
 // --- Client store (browser) ---
 // file: stores/useChatStore.ts
-import { createClientSocketStore } from "@yebichu/zustand-socketio";
+import { createClientSocketStore } from "@mihail_nica/zustand-socketio";
 
 export const useChatStore = createClientSocketStore({
   url: "ws://localhost:3000",
@@ -410,7 +410,7 @@ export const useChatStore = createClientSocketStore({
 
 // --- Server store (RSC/SSR) ---
 // file: lib/socket.ts
-import { createServerSocketStore } from "@yebichu/zustand-socketio";
+import { createServerSocketStore } from "@mihail_nica/zustand-socketio";
 
 export const emitServerEvent = createServerSocketStore({
   url: process.env.SOCKET_URL!,
@@ -425,7 +425,7 @@ export const emitServerEvent = createServerSocketStore({
 import { create } from "zustand";
 import { devtools, persist, subscribeWithSelector } from "zustand/middleware";
 import { immer } from "zustand/middleware/immer";
-import { socketio } from "@yebichu/zustand-socketio/middleware";
+import { socketio } from "@mihail_nica/zustand-socketio/middleware";
 
 interface GameState {
   score: number;

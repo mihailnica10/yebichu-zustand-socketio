@@ -1,0 +1,9 @@
+src/
+**/*.test.ts
+vitest.config.ts
+tsconfig.json
+tsup.config.ts
+*.log
+.env
+.DS_Store
+coverage/
